@@ -23,6 +23,10 @@ $(document).ready(function () {
 
         console.log("here we go");
 
+        for (i=0; i < 101; i++){
+            console.log(i, "har-d-har-har");
+        };
+
     });
 
 
