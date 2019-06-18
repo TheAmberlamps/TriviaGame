@@ -27,6 +27,7 @@ $(document).ready(function () {
         question7.innerHTML = "";
         question8.innerHTML = "";       
         stopButt.innerHTML = "";
+        console.log("Purge");
 
     }
 
@@ -101,6 +102,7 @@ $(document).ready(function () {
         question7.innerHTML = "";
         question8.innerHTML = "";       
         stopButt.innerHTML = "";
+        console.log("Stopped");
 
         // Then tabulate right and wrong answers, and unanswers
         
