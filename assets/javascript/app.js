@@ -16,11 +16,27 @@ $(document).ready(function () {
 
     var stopButt = document.getElementById("stopButt");
 
+    function purge () {
+        
+        question1.innerHTML = "";
+        question2.innerHTML = "";
+        question3.innerHTML = "";
+        question4.innerHTML = "";
+        question5.innerHTML = "";
+        question6.innerHTML = "";
+        question7.innerHTML = "";
+        question8.innerHTML = "";       
+        stopButt.innerHTML = "";
+
+    }
+
     // Now an .on click event to clear away the starting button and display the questions, "the done" button and start the timer.
     
     $("#startButt").click(function(){
 
-        setTimeout(function(){alert("hello");}, 1000 *5);
+        // Whatever questions are or aren't answered are sorted out if you don't click on the done button and the time runs out.
+
+        setTimeout(purge, 1000 *20);
 
         // Avoid using document.write or writeln, they don't only wipe out your body but wipe out everything in the head as well.
 
@@ -33,6 +49,8 @@ $(document).ready(function () {
         // Haha, works like a charm! Now split the individual questions up for the sake of your own sanity and write another handful, then we can set about sorting the answers.
 
         // Ok, time to figure out how to deal with the information from these forms. I have a feeling this will be hard.
+
+        this.innerHTML = "";
 
         question1.innerHTML = "<h2>What game almost destroyed the western videogame market in the 20th century?</h2><form id='ques1' action=''><input type='radio' name='gender' value='guess1'> Pong <input type='radio' name='gender' value='guess2'> E.T. <input type='radio' name='gender' value='guess3'> Asteroids <input type='radio' name='gender' value='guess4'> Joust </form><br>"
 
@@ -66,7 +84,25 @@ $(document).ready(function () {
 
     });
 
-    $("#stopbutt").click(function(){
+    $("#stopButt").click(function(){
+
+        console.log("Now we empty the start divs and fill the score divs.");
+
+        alert("Stop");
+
+        // Clear the questions
+
+        question1.innerHTML = "";
+        question2.innerHTML = "";
+        question3.innerHTML = "";
+        question4.innerHTML = "";
+        question5.innerHTML = "";
+        question6.innerHTML = "";
+        question7.innerHTML = "";
+        question8.innerHTML = "";       
+        stopButt.innerHTML = "";
+
+        // Then tabulate right and wrong answers, and unanswers
         
     });
 
