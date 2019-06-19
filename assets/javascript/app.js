@@ -5,6 +5,8 @@ $(document).ready(function () {
     var correctAnswers = 0;
     var incorrectAnswers = 0;
 
+    var counter = document.getElementById("CD");
+
     var question1 = document.getElementById("q1");
     var question2 = document.getElementById("q2");
     var question3 = document.getElementById("q3");
@@ -37,7 +39,20 @@ $(document).ready(function () {
 
         // Whatever questions are or aren't answered are sorted out if you don't click on the done button and the time runs out.
 
-        setTimeout(purge, 1000 *20);
+        // setTimeout(purge, 1000 *10);
+
+        var n = 20;
+        setTimeout(countDown,1000);
+
+        function countDown(){
+        n--;
+        if(n > 0){
+            setTimeout(countDown,1000);
+        }
+        console.log(n);
+        counter.innerHTML = "<h2>Time left: " + n + "</h2><br>";
+        
+        }
 
         // Avoid using document.write or writeln, they don't only wipe out your body but wipe out everything in the head as well.
 
@@ -71,8 +86,6 @@ $(document).ready(function () {
 
         // this.innerHTML = "<h2>Hello Again World!</h2><form id='ques2' action=''><input type='radio' name='gender' value='guess1'> Guess 1<input type='radio' name='gender' value='guess2'> Guess 2<input type='radio' name='gender' value='guess3'> Guess 3<input type='radio' name='gender' value='guess4'> Guess 4</form>";
 
-        console.log("here we go again");
-
         stopButt.innerHTML = "<h2>Done</h2>"
 
         // Just a fiddle. Speaking of which I should make a dedicated fiddle project to experiment with, but that's for another time.
@@ -88,6 +101,8 @@ $(document).ready(function () {
     $("#stopButt").click(function(){
 
         console.log("Now we empty the start divs and fill the score divs.");
+
+        clearTimeout(purge);
 
         alert("Stop");
 
