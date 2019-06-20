@@ -7,6 +7,8 @@ $(document).ready(function () {
 
     var counter = document.getElementById("CD");
 
+    var questing = document.getElementById("quests");
+
     var question1 = document.getElementById("q1");
     var question2 = document.getElementById("q2");
     var question3 = document.getElementById("q3");
@@ -40,6 +42,7 @@ $(document).ready(function () {
         // Whatever questions are or aren't answered are sorted out if you don't click on the done button and the time runs out.
 
         // setTimeout(purge, 1000 *10);
+        counter.innerHTML = "<h2>Time left: " + "20" + "</h2><br>";
 
         var n = 20;
         setTimeout(countDown,1000);
@@ -68,33 +71,25 @@ $(document).ready(function () {
 
         this.innerHTML = "";
 
-        question1.innerHTML = "<h2>What game almost destroyed the western videogame market in the 20th century?</h2><form id='ques1' action=''><input type='radio' name='gender' value='guess1'> Pong <input type='radio' name='gender' value='guess2'> E.T. <input type='radio' name='gender' value='guess3'> Asteroids <input type='radio' name='gender' value='guess4'> Joust </form><br>"
+        questing.innerHTML = 
 
-        question2.innerHTML = "<h2>What is the name of the main character in the Legend of Zelda?</h2><form id='ques2' action=''><input type='radio' name='gender' value='guess1'> Lonk <input type='radio' name='gender' value='guess2'> Epona <input type='radio' name='gender' value='guess3'> Link <input type='radio' name='gender' value='guess4'> Zelda </form><br>";
+        question1.innerHTML = "<h2>What game almost destroyed the western videogame market in the 20th century?</h2><form id='ques1' action='' method='get'><input type='radio' name='gender' value='guess1'> Pong <input type='radio' name='gender'> E.T. <input type='radio' name='gender'> Asteroids <input type='radio' name='gender'> Joust </form><br>"
+
+        question2.innerHTML = "<h2>What is the name of the main character in the Legend of Zelda?</h2><form id='ques2' action='' method='get'><input type='radio' name='gender'> Lonk <input type='radio' name='gender'> Epona <input type='radio' name='gender'> Link <input type='radio' name='gender'> Zelda </form><br>";
        
-        question3.innerHTML = "<h2>In what year was the Nintendo Entertainment System released in North America?</h2><form id='ques3' action=''><input type='radio' name='gender' value='guess1'> 1982 <input type='radio' name='gender' value='guess2'> 1986 <input type='radio' name='gender' value='guess3'> 2000 <input type='radio' name='gender' value='guess4'> 1985 </form><br>";
+        question3.innerHTML = "<h2>In what year was the Nintendo Entertainment System released in North America?</h2><form id='ques3' method='get' action=''><input type='radio' name='gender'> 1982 <input type='radio' name='gender'> 1986 <input type='radio' name='gender'> 2000 <input type='radio' name='gender'> 1985 </form><br>";
 
-        question4.innerHTML = "<h2>What game made its debut in the 1989 film The Wizard?</h2><form id='ques4' action=''><input type='radio' name='gender' value='guess1'> Super Mario 3 <input type='radio' name='gender' value='guess2'> Kirby's Adventure <input type='radio' name='gender' value='guess3'> Contra <input type='radio' name='gender' value='guess4'> Aterburner </form><br>";
+        question4.innerHTML = "<h2>What game made its debut in the 1989 film The Wizard?</h2><form id='ques4' action='' method='get'><input type='radio' name='gender'> Super Mario 3 <input type='radio' name='gender'> Kirby's Adventure <input type='radio' name='gender'> Contra <input type='radio' name='gender'> Aterburner </form><br>";
 
-        question5.innerHTML = "<h2>On what console was Streets of Rage released?</h2><form id='ques5' action=''><input type='radio' name='gender' value='guess1'> Genesis <input type='radio' name='gender' value='guess2'> Super Nintendo <input type='radio' name='gender' value='guess3'> Playstation <input type='radio' name='gender' value='guess4'> 3DO </form><br>";
+        question5.innerHTML = "<h2>On what console was Streets of Rage released?</h2><form id='ques5' action='' method='get'><input type='radio' name='gender'> Genesis <input type='radio' name='gender'> Super Nintendo <input type='radio' name='gender'> Playstation <input type='radio' name='gender'> 3DO </form><br>";
 
-        question6.innerHTML = "<h2>What popular series of games is Hideo Kojima responsible for?</h2><form id='' action=''><input type='radio' name='gender' value='guess1'> Castlevania <input type='radio' name='gender' value='guess2'> Sonic the Hedgehog <input type='radio' name='gender' value='guess3'> Pokemon <input type='radio' name='gender' value='guess4'> Metal Gear </form><br>";
+        question6.innerHTML = "<h2>What popular series of games is Hideo Kojima responsible for?</h2><form id='' action='' method='get'><input type='radio' name='gender'> Castlevania <input type='radio' name='gender'> Sonic the Hedgehog <input type='radio' name='gender'> Pokemon <input type='radio' name='gender'> Metal Gear </form><br>";
 
-        question7.innerHTML = "<h2>What studio published Warcraft?</h2><form id='' action=''><input type='radio' name='gender' value='guess1'> Bioware <input type='radio' name='gender' value='guess2'> Blizzard <input type='radio' name='gender' value='guess3'> Black Isle <input type='radio' name='gender' value='guess4'> Electronic Arts </form><br>";
+        question7.innerHTML = "<h2>What studio published Warcraft?</h2><form id='' action='' method='get'><input type='radio' name='gender'> Bioware <input type='radio' name='gender'> Blizzard <input type='radio' name='gender'> Black Isle <input type='radio' name='gender'> Electronic Arts </form><br>";
 
-        question8.innerHTML = "<h2>How much was the global videogame market worth in 2018?</h2><form id='' action=''><input type='radio' name='gender' value='guess1'> $569 million <input type='radio' name='gender' value='guess2'> $799 billion <input type='radio' name='gender' value='guess3'> $135 billion <input type='radio' name='gender' value='guess4'> $61 billion </form><br>";
-
-        // this.innerHTML = "<h2>Hello Again World!</h2><form id='ques2' action=''><input type='radio' name='gender' value='guess1'> Guess 1<input type='radio' name='gender' value='guess2'> Guess 2<input type='radio' name='gender' value='guess3'> Guess 3<input type='radio' name='gender' value='guess4'> Guess 4</form>";
+        question8.innerHTML = "<h2>How much was the global videogame market worth in 2018?</h2><form id='' action='' method='get'><input type='radio' name='gender'> $569 million <input type='radio' name='gender'> $799 billion <input type='radio' name='gender'> $135 billion <input type='radio' name='gender'> $61 billion </form><br>";
 
         stopButt.innerHTML = "<h2>Done</h2>"
-
-        // Just a fiddle. Speaking of which I should make a dedicated fiddle project to experiment with, but that's for another time.
-
-        // for (i=0; i < 101; i++){
-        //     console.log(i, "har-d-har-har");
-        // };
-
-        // Last step for the Start button is to create a Done button.
 
     });
 
