@@ -30,7 +30,6 @@ $(document).ready(function () {
     
     function purge () {
 
-        n = 0;
         counter.innerHTML = "";
         question1.innerHTML = "";
         question2.innerHTML = "";
@@ -164,6 +163,20 @@ $(document).ready(function () {
                 console.log(n);
                 counter.innerHTML = "<h2>Time left: " + n + "</h2><br>";
             }
+            if(n === 0){
+                
+                submitForms();
+
+                n = -1;
+                
+                purge();
+
+                correctAnswers.innerHTML = "<h2>Correct: " + right + "</h2>";
+
+                incorrectAnswers.innerHTML = "<h2>Incorrect: " + wrong + "</h2>";
+        
+                unTagged.innerHTML = "<h2>Unanswered: " + unAnswered + "</h2>";
+            }
             };
         
             // if ( n === 0){
@@ -207,9 +220,9 @@ $(document).ready(function () {
 
         // Then purge the empty divs and display the number of right and wrong guesses
         
-        purge();
+        n = -1;
         
-        counter.innerHTML = "";
+        purge();
 
         correctAnswers.innerHTML = "<h2>Correct: " + right + "</h2>";
 
