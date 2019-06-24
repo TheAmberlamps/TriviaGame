@@ -156,6 +156,7 @@ $(document).ready(function () {
         setTimeout(countDown,1000);
         
         function countDown(){
+           
             if(n > 0){
                 n--;
                 setTimeout(countDown,1000);
@@ -163,6 +164,7 @@ $(document).ready(function () {
                 console.log(n);
                 counter.innerHTML = "<h2>Time left: " + n + "</h2><br>";
             }
+
             if(n === 0){
                 
                 submitForms();
@@ -215,8 +217,6 @@ $(document).ready(function () {
         // Run a function that tabulates right and wrong answers
 
         submitForms();
-        
-        alert("Stop");
 
         // Then purge the empty divs and display the number of right and wrong guesses
         
