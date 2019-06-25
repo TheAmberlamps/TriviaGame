@@ -2,7 +2,7 @@ $(document).ready(function () {
 
     // Variables to contain the number of correct or incorrect guesses.
     
-    var n = 20;
+    var n = 120;
 
     var right = 0;
 
@@ -150,8 +150,7 @@ $(document).ready(function () {
     
     $("#startButt").click(function(){
         
-        
-        counter.innerHTML = "<h2>Time left: " + "20" + "</h2><br>";
+        counter.innerHTML = "<h2>Time left: " + n + "</h2><br>";
         
         setTimeout(countDown,1000);
         
@@ -179,16 +178,8 @@ $(document).ready(function () {
         
                 unTagged.innerHTML = "<h2>Unanswered: " + unAnswered + "</h2>";
             }
-            };
+        };
         
-            // if ( n === 0){
-            // purge();
-            // console.log("purged");
-            // }
-
-            
-        // Ok, time to figure out how to deal with the information from these forms. I have a feeling this will be hard.
-
 
         this.innerHTML = "";
 
